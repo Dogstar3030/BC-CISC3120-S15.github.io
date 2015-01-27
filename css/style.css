@@ -30,6 +30,10 @@ pre {
 	background:#faf8f0;
 }
 
+td {
+	vertical-align: top;
+}
+
 .exam {
   color:red;
 }
