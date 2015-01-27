@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>NetCheckers</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro'
+    rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css"
+        href="http://www.sci.brooklyn.cuny.edu/~sdexter/style.css" />
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Project 3: Supplemental Suggestions</h1>
+
+        <p>
+            Now that you've had some time to ponder project 3 (and,
+            hopefully, get the checkers game running in proper MVC
+            style--make sure you have an
+            <code>Observable</code>
+            and an
+            <code>Observer</code>
+            involved!), here are a few thoughts about how to make the
+            transition to the networked version. Remember that, unlike
+            the Chatter-related lab/projects, here the client and server
+            have <em>very</em> different roles: the server 'hosts' a
+            game which will be played by two clients (and, possibly,
+            observed by other clients).
+        </p>
+
+        <p>
+            First, think about making the client as <em>minimal</em> as
+            possible. The client should incorporate the view and the
+            controller: what's the <em>least</em> amount of behavior it
+            could reasonably have? It needs to be able to display the
+            current state of a checkers game, of course, and it should
+            probably be smart enough to know whose turn it is (so it can
+            prevent the user from trying to take a turn at the wrong
+            time).
+        </p>
+
+        <p>
+            You <em>might</em> also want to give the client the ability
+            to decide whether the user is making a legal move, or you
+            could give it the ability to eliminate obviously illegal
+            moves (like moving a checker non-diagonally). That's up to
+            you--though the most minimal client wouldn't even be able to
+            do that. It's OK to have the server evaluate potential
+            moves, too--it might not be the most efficient approach, but
+            it's fine for the purposes of this project.
+        </p>
+
+        <p>
+            Then: what information, exactly, does the client need in
+            order to be able to do its job? Hint: it probably does <em>not</em>
+            need a reference to
+            <code>CheckerBoard</code>
+            object. How far can you minimize the client's information
+            needs?
+        </p>
+
+        <p>Once you've decided exactly what the client will do,
+            think about the kind of communication the clients and server
+            will need. What will the client need from the server? What
+            the client have to send to the server? Don't worry quite as
+            much about minimialism here, but of course the more
+            information you send back and forth, the potentially slower
+            the game will be.</p>
+
+        <p>As usual, the impact of your effort will be greatest if
+            you use as much existing code as you can. Once you get the
+            networked game working, then you can experiment with adding
+            chat, improving the UI, etc.</p>
+
+        <hr />
+
+        <p>Now that I've discovered that the Oracle tutorial has
+            been rewritten to use JSON instead of XML (so there's no
+            helpful code for you to study), I should point out a couple
+            key features of any class you want to encode or decode using
+            JAXB.</p>
+
+        <p>
+            First, the class should be annotated with
+            <code>@XmlRootElement</code>
+            (and you'll also need to
+            <code>import javax.xml.bind.annotation.*</code>
+            ). So, for example, you might have
+        </p>
+
+        <code>
+            import javax.xml.bind.annotation.*;<br /> @XmlRootElement<br />
+            class MoveMessage {
+        </code>
+
+        <p>And so on.</p>
+        <p>
+            Second, your class needs to be composed entirely of "getters
+            and setters." That is, the only constructor you have should
+            be the default (no parameters) constructor, and for each
+            instance variable
+            <code>x</code>
+            , you should have a
+            <code>getX()</code>
+            and
+            <code>setX()</code>
+            method. This is very easy to do in Eclipse: once you have
+            your instance variables listed, just highlight that set of
+            lines, then under the <strong>Source</strong> menu, select <strong>Generate
+                Getters and Setters</strong>. Eclipse will write the proper
+            methods.
+
+        </p>
+
+    </div>
+
+</body>
+</html>
