@@ -19,12 +19,13 @@
             computer. In the first case, you can just install Eclipse
             (as explained below), and it should work easily.</p>
 
-        <p>In the second case (College labs), here's what I've been
-            advised: in order to maximize your flexibility (i.e. to be
-            able to work at any lab computer), you should install
-            Eclipse on a USB drive, and run it from there. This has
-            worked for simple programs; I'm relying on you to tell me if
-            you have any problems.</p>
+        <p>In the second case (College labs), Eclipse has been
+            installed on some machines in the W.E.B. (I'll let you know
+            exactly which ones as soon as I find out). You'll be able to
+            access your GitHub repositories that way (though make sure
+            you delete them from the computer when you're done working),
+            or you can bring your Eclipse workspace on a USB drive (see
+            below). If you need to work at other labs, you will need to have Eclipse installed on your USB drive (again, see below)<./p>
 
         <h3>Installing Eclipse</h3>
 
@@ -39,7 +40,7 @@
             I strongly recommend installing the Eclipse version called
             "Eclipse IDE for Java EE Developers"&mdash;the Windows
             version is <a
-                href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-jee-luna-R-win32-x86_64.zip">here</a>.
+                href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR1a/eclipse-jee-luna-SR1a-win32-x86_64.zip">here</a>.
             Once you've installed that, you need one more plugin. Under
             the "Help" menu, select "Install New Software...". On the
             window that pops up, click the "Add.." button and enter the
@@ -67,16 +68,16 @@
         </p>
 
         <p>
-            Finally, you may want to be sure that Java 7 is available to
+            Finally, you may want to be sure that Java 8 is available to
             you&mdash;it's hard to predict what will be on the College
             machines. (You may not <em>need</em> to do this; if you
             don't have any trouble without this step, you can skip it.)
-            To do this, download the Java 7 JDK (currently at
-            <code>http://download.oracle.com/otn-pub/java/java_ee_sdk/7u3/java_ee_sdk-7u1.zip</code>
+            To do this, download the Java 8 JDK (currently at
+            <code>http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</code>
             ). When you run the installer, make sure it installs <em>on
                 your USB drive</em>. Record the folder name (probably
             something like
-            <code>e:\java\jdk1.7.3\</code>
+            <code>e:\java\jdk1.8.0\</code>
             ).
         </p>
         <p>
@@ -91,7 +92,7 @@
         </p>
 
 
-        <code>set Path=java\jdk1.7.3\bin;%Path% </code>
+        <code>set Path=java\jdk1.8.0\bin;%Path% </code>
 
         <p>Note: don't use a drive letter, but otherwise make sure
             the path matches the name of the folder where you installed
@@ -101,9 +102,9 @@
             right version of Java, open a command window and issue three
             commands:</p>
 
-        <code>E: <br />javaUSB 
-        <br />
-        eclipse\eclipse.exe<br /></code>
+        <code>
+            E: <br />javaUSB <br /> eclipse\eclipse.exe<br />
+        </code>
 
         <p>Again, the drive letter and particular paths may vary
             depending on how you've set up your USB drive.</p>
